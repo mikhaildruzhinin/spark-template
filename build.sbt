@@ -15,8 +15,8 @@ ThisBuild / assemblyMergeStrategy := {
 lazy val root = (project in file("."))
   .settings(
     name := "spark-template",
-    assembly / mainClass := Some("com.github.mikhaildruzhinin.Main"),
-//    assembly / assemblyOutputPath := file(s"apps/${(assembly/assemblyJarName).value}"),
+    assembly / mainClass := Some(s"${ThisBuild / organization}.Main"),
+//    assembly / assemblyOutputPath := file(s"apps/${(assembly / assemblyJarName).value}"),
   )
 
 val sparkVersion = "3.2.2"
